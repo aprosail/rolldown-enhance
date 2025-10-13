@@ -1,0 +1,47 @@
+{
+  "name": "tsconfig-aliases",
+  "description": "Parse aliases from tsconfig.json for bundler configurations.",
+  "version": "1.1.1",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aprosail/rolldown-enhance.git",
+    "directory": "packages/tsconfig-aliases"
+  },
+  "keywords": [
+    "aliases",
+    "config",
+    "ts",
+    "tsconfig",
+    "tsconfig-paths"
+  ],
+  "exports": {
+    ".": {
+      "types": "./out/index.d.ts",
+      "import": "./out/index.js",
+      "require": "./out/commonjs/index.js",
+      "default": "./out/index.js"
+    }
+  },
+  "scripts": {
+    "prepublish": "pnpm review && pnpm test && pnpm build",
+    "format": "prettier --write .",
+    "review": "prettier --check . && oxlint",
+    "build": "rolldown --config rolldown.config.ts",
+    "test": "vitest run",
+    "dev": "vitest",
+    "changelog": "current-changelog"
+  },
+  "dependencies": {
+    "strip-json-comments": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:dev",
+    "current-changelog": "catalog:dev",
+    "rolldown": "catalog:lib",
+    "rolldown-plugin-dts": "catalog:dev",
+    "typescript": "catalog:dev",
+    "vitest": "catalog:dev"
+  }
+}
