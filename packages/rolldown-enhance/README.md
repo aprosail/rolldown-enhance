@@ -1,4 +1,4 @@
-# Rolldown Enhance Workspace
+# Rolldown Enhance
 
 Some plugins to make your rolldown experience better.
 

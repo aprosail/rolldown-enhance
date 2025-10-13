@@ -1,20 +1,20 @@
 {
-  "name": "tsconfig-aliases",
-  "description": "Parse aliases from tsconfig.json for bundler configurations.",
-  "version": "1.1.1",
+  "name": "rolldown-enhance",
+  "description": "Some plugins to make your rolldown experience better.",
+  "version": "0.0.0",
   "type": "module",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/aprosail/rolldown-enhance.git",
-    "directory": "packages/tsconfig-aliases"
+    "directory": "packages/rolldown-enhance"
   },
   "keywords": [
-    "aliases",
-    "config",
-    "ts",
-    "tsconfig",
-    "tsconfig-paths"
+    "devtool",
+    "plugins",
+    "rolldown",
+    "rolldown-enhance",
+    "rolldown-plugins"
   ],
   "exports": {
     ".": {
@@ -32,7 +32,7 @@
     "changelog": "current-changelog"
   },
   "dependencies": {
-    "strip-json-comments": "^5.0.3"
+    "tsconfig-aliases": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "catalog:dev",
