@@ -1,0 +1,13 @@
+{
+  "name": "rolldown-enhance-workspace",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {},
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "oxlint": "^1.22.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-sh": "^0.18.0"
+  }
+}
