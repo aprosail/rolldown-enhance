@@ -94,6 +94,9 @@ importers:
 
   packages/rolldown-enhance:
     dependencies:
+      rolldown-plugin-tsconfig-paths:
+        specifier: workspace:*
+        version: link:../../plugins/tsconfig-paths
       tsconfig-aliases:
         specifier: workspace:*
         version: link:../tsconfig-aliases
@@ -113,9 +116,6 @@ importers:
       rolldown-plugin-dts:
         specifier: catalog:dev
         version: 0.16.11(rolldown@1.0.0-beta.43)(typescript@5.9.3)
-      rolldown-plugin-tsconfig-paths:
-        specifier: workspace:*
-        version: link:../../plugins/tsconfig-paths
       typescript:
         specifier: catalog:dev
         version: 5.9.3

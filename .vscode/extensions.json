@@ -1,5 +1,8 @@
 {
   "recommendations": [
+    // Languages and frameworks.
+    "vitest.explorer",
+
     // Configurations.
     "redhat.vscode-yaml",
 
