@@ -7,13 +7,14 @@ import { dependencies } from "./package.json"
 
 const root = import.meta.dirname
 const out = join(root, "out")
-const lib = defineConfig({
+const bin = defineConfig({
   external: [/^node:/g, ...Object.keys(dependencies), ...builtinModules],
   cwd: root,
-  input: join(root, "src/index.ts"),
+  input: join(root, "src/main.ts"),
   output: { dir: out, format: "esm", minify: true, sourcemap: true },
 })
 
+const lib = defineConfig({ ...bin, input: join(root, "src/index.ts") })
 const esModule = defineConfig({ plugins: [dts({ sourcemap: true })], ...lib })
 const commonJS = defineConfig({
   ...lib,
@@ -25,7 +26,6 @@ const commonJS = defineConfig({
   },
 })
 
-// The output directory is ensured to be inside the package directory.
 mkdirSync(out, { recursive: true })
 for (const n of readdirSync(out)) rmSync(join(out, n), { recursive: true })
-export default defineConfig([esModule, commonJS])
+export default defineConfig([bin, esModule, commonJS])

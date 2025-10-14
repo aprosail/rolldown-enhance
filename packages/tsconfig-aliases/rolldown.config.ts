@@ -25,7 +25,6 @@ const commonJS = defineConfig({
   },
 })
 
-// The output directory is ensured to be inside the package directory.
 mkdirSync(out, { recursive: true })
 for (const n of readdirSync(out)) rmSync(join(out, n), { recursive: true })
 export default defineConfig([esModule, commonJS])

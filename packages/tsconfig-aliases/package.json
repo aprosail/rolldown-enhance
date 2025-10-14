@@ -36,8 +36,8 @@
   },
   "devDependencies": {
     "@types/node": "catalog:dev",
-    "current-changelog": "catalog:dev",
-    "rolldown": "catalog:lib",
+    "current-changelog": "workspace:*",
+    "rolldown": "catalog:dep",
     "rolldown-plugin-dts": "catalog:dev",
     "typescript": "catalog:dev",
     "vitest": "catalog:dev"

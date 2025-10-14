@@ -35,12 +35,12 @@
     "changelog": "tsx src/main.ts"
   },
   "dependencies": {
-    "commander": "catalog:lib",
-    "consola": "catalog:lib"
+    "commander": "catalog:dep",
+    "consola": "catalog:dep"
   },
   "devDependencies": {
     "@types/node": "catalog:dev",
-    "rolldown": "catalog:lib",
+    "rolldown": "catalog:dep",
     "rolldown-plugin-dts": "catalog:dev",
     "tsx": "catalog:dev",
     "typescript": "catalog:dev",
