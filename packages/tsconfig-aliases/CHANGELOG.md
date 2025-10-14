@@ -1,3 +1,9 @@
+## 1.1.2
+
+Fix tsconfig code reuse: using `common-lib-tsconfig` package,
+and avoid workspace relative extend path outside this child package.
+No source code changed.
+
 ## 1.1.1
 
 1. Move into `rolldown-enhance` repository.

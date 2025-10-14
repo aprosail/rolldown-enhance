@@ -1,3 +1,10 @@
+## 1.2.2
+
+Fix tsconfig code reuse: using `common-lib-tsconfig` package,
+and avoid workspace relative extend path outside this child package.
+Then optimize `rolldown.config.ts` code structure.
+No source code changed.
+
 ## 1.2.1
 
 1. Move into `rolldown-enhance` repository.
