@@ -1,4 +1,4 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "common-lib-tsconfig/tsconfig.json",
   "include": ["src", "rolldown.config.ts", "vitest.config.ts"]
 }

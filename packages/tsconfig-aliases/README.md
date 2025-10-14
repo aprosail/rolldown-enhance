@@ -17,19 +17,19 @@ you can use it in any bundler that support configuration format like this.
 
 You may configure `tsconfig.json` like this:
 
-```json
+```jsonc
 {
   // Definitely, this package supports parse from json with comments.
   "compilerOptions": {
     // ... (other compiler options)
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+    },
   },
   "include": [
     // ... (custom include paths)
-  ]
+  ],
 }
 ```
 

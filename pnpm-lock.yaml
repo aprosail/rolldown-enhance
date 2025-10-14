@@ -19,9 +19,6 @@ catalogs:
     '@types/node':
       specifier: ^24.7.2
       version: 24.7.2
-    current-changelog:
-      specifier: ^1.2.0
-      version: 1.2.0
     rolldown-plugin-dts:
       specifier: ^0.16.11
       version: 0.16.11
@@ -42,6 +39,9 @@ importers:
       '@types/node':
         specifier: catalog:dev
         version: 24.7.2
+      common-lib-tsconfig:
+        specifier: workspace:*
+        version: link:packages/common-lib-tsconfig
       oxlint:
         specifier: ^1.22.0
         version: 1.22.0
@@ -55,6 +55,8 @@ importers:
         specifier: catalog:dev
         version: 3.2.4(@types/node@24.7.2)(tsx@4.20.6)
 
+  packages/common-lib-tsconfig: {}
+
   packages/current-changelog:
     dependencies:
       commander:
@@ -67,6 +69,9 @@ importers:
       '@types/node':
         specifier: catalog:dev
         version: 24.7.2
+      common-lib-tsconfig:
+        specifier: workspace:*
+        version: link:../common-lib-tsconfig
       rolldown:
         specifier: catalog:dep
         version: 1.0.0-beta.43
@@ -92,9 +97,12 @@ importers:
       '@types/node':
         specifier: catalog:dev
         version: 24.7.2
+      common-lib-tsconfig:
+        specifier: workspace:*
+        version: link:../common-lib-tsconfig
       current-changelog:
-        specifier: catalog:dev
-        version: 1.2.0
+        specifier: workspace:*
+        version: link:../current-changelog
       rolldown:
         specifier: catalog:dep
         version: 1.0.0-beta.43
@@ -117,9 +125,40 @@ importers:
       '@types/node':
         specifier: catalog:dev
         version: 24.7.2
+      common-lib-tsconfig:
+        specifier: workspace:*
+        version: link:../common-lib-tsconfig
       current-changelog:
+        specifier: workspace:*
+        version: link:../current-changelog
+      rolldown:
+        specifier: catalog:dep
+        version: 1.0.0-beta.43
+      rolldown-plugin-dts:
         specifier: catalog:dev
-        version: 1.2.0
+        version: 0.16.11(rolldown@1.0.0-beta.43)(typescript@5.9.3)
+      typescript:
+        specifier: catalog:dev
+        version: 5.9.3
+      vitest:
+        specifier: catalog:dev
+        version: 3.2.4(@types/node@24.7.2)(tsx@4.20.6)
+
+  plugins/tsconfig-paths:
+    dependencies:
+      tsconfig-aliases:
+        specifier: workspace:*
+        version: link:../../packages/tsconfig-aliases
+    devDependencies:
+      '@types/node':
+        specifier: catalog:dev
+        version: 24.7.2
+      common-lib-tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/common-lib-tsconfig
+      current-changelog:
+        specifier: workspace:*
+        version: link:../../packages/current-changelog
       rolldown:
         specifier: catalog:dep
         version: 1.0.0-beta.43
@@ -658,10 +697,6 @@ packages:
   consola@3.4.2:
     resolution: {integrity: sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA==}
     engines: {node: ^14.18.0 || >=16.10.0}
-
-  current-changelog@1.2.0:
-    resolution: {integrity: sha512-oH0xnUeXQjdAJgFIExv5Y9Uk5T7xRbPTF29AIA+KRR6w+SZFfaGnPo6OnmtqaaECaE0sr/tEUWNj2p0+A11zxg==}
-    hasBin: true
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -1313,11 +1348,6 @@ snapshots:
   commander@14.0.1: {}
 
   consola@3.4.2: {}
-
-  current-changelog@1.2.0:
-    dependencies:
-      commander: 14.0.1
-      consola: 3.4.2
 
   debug@4.4.3:
     dependencies:

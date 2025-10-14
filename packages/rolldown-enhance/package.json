@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@types/node": "catalog:dev",
+    "common-lib-tsconfig": "workspace:*",
     "current-changelog": "workspace:*",
     "rolldown": "catalog:dep",
     "rolldown-plugin-dts": "catalog:dev",

@@ -15,19 +15,19 @@
 
 您可以这样配置 `tsconfig.json`：
 
-```json
+```jsonc
 {
   // 本库支持解析包含注释的 tsconfig.json 文件。
   "compilerOptions": {
     // ... (其他编译器选项)
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+    },
   },
   "include": [
     // ... (自定义包含路径)
-  ]
+  ],
 }
 ```
 

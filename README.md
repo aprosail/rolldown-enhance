@@ -3,7 +3,7 @@
 Some plugins to make your rolldown experience better.
 This repository is a pnpm workspace containing following packages and plugins:
 
-Packages:
+Packages (tools and lower level APIs):
 
 - [current-changelog](./packages/current-changelog):
   generate changelog of current version.
@@ -12,7 +12,10 @@ Packages:
 - [tsconfig-aliases](./packages/tsconfig-aliases):
   detect aliases defined in `tsconfig.json`.
 
-Plugins:
+Plugins (with `rolldown-plugin-` prefix):
+
+- [tsconfig-paths](./plugins/tsconfig-paths):
+  resolve paths from `tsconfig.json` for Rolldown.
 
 WIP.
 

@@ -1,0 +1,19 @@
+{
+  "name": "common-lib-tsconfig",
+  "description": "Common tsconfig.json templates for libraries development.",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aprosail/rolldown-enhance.git",
+    "directory": "packages/common-lib-tsconfig"
+  },
+  "keywords": [
+    "code-reuse",
+    "tsconfig"
+  ],
+  "exports": {
+    "./tsconfig.json": "./tsconfig.json"
+  }
+}

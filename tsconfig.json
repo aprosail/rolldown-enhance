@@ -1,21 +1,4 @@
 {
-  "compilerOptions": {
-    "lib": ["ESNext"],
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "isolatedModules": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
-
-    // Strict mode.
-    "strict": true,
-    "strictNullChecks": true,
-    "strictBindCallApply": true,
-    "strictFunctionTypes": true,
-    "strictBuiltinIteratorReturn": true,
-    "strictPropertyInitialization": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true
-  },
+  "extends": "common-lib-tsconfig/tsconfig.json",
   "include": ["vitest.config.ts"]
 }
