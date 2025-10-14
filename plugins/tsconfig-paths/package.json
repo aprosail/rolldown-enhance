@@ -1,7 +1,7 @@
 {
   "name": "rolldown-plugin-tsconfig-paths",
   "description": "Resolves paths from tsconfig.json for Rolldown.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "license": "Apache-2.0",
   "repository": {

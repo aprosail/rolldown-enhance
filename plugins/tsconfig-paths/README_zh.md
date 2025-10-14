@@ -1,19 +1,17 @@
-# Rolldown Plugin TSConfig Paths
+# Rolldown 插件 TSConfig 路径解析
 
 [en(English)](./README.md) |
 [zh(中文)](./README_zh.md)
 
-Resolves paths from tsconfig.json for Rolldown.
+为 Rolldown 解析 tsconfig.json 中的路径映射。
 
-This plugin will help you to parse paths from a default or specified
-`tsconfig.json` file, or a parsed tsconfig object,
-and then modify the `resolve.alias` option of Rolldown.
-That you only need a single line of code
-to support tsconfig aliases in Rolldown.
+这个插件将帮助您从默认或指定的 `tsconfig.json`
+文件，或已解析的 tsconfig 对象中解析路径映射，然后修改 Rolldown 的
+`resolve.alias` 选项。您只需要一行代码即可在 Rolldown 中支持 tsconfig 别名。
 
-## Usage
+## 使用方法
 
-It will detect `tsconfig.json` file in cwd by default.
+默认情况下，它会检测当前工作目录中的 `tsconfig.json` 文件。
 
 ```ts
 // rolldown.config.ts
@@ -25,7 +23,7 @@ export default defineConfig({
 })
 ```
 
-You may also customize a tsconfig path:
+您也可以自定义 tsconfig 路径：
 
 ```ts
 // rolldown.config.ts
@@ -39,7 +37,7 @@ export default defineConfig({
 })
 ```
 
-You may also customize a tsconfig object:
+您也可以自定义 tsconfig 对象：
 
 ```ts
 // rolldown.config.ts
@@ -51,6 +49,6 @@ export default defineConfig({
 })
 ```
 
-## Open Source License
+## 开源许可证
 
-This package is released under the [Apache 2.0 License](./LICENSE).
+本包以 [Apache 2.0 许可证](./LICENSE) 开源。

@@ -3,14 +3,14 @@ import { builtinModules } from "node:module"
 import { join } from "node:path"
 import { defineConfig } from "rolldown"
 import { dts } from "rolldown-plugin-dts"
-import aliases from "tsconfig-aliases"
+import tsconfigPaths from "rolldown-plugin-tsconfig-paths"
 import { dependencies } from "./package.json"
 
 const root = import.meta.dirname
 const out = join(root, "out")
 const lib = defineConfig({
+  plugins: [tsconfigPaths()],
   external: [/^node:/g, ...Object.keys(dependencies), ...builtinModules],
-  resolve: { alias: aliases() },
   cwd: root,
   input: join(root, "src/index.ts"),
   output: { dir: out, format: "esm", minify: true, sourcemap: true },
