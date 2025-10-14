@@ -1,7 +1,7 @@
 {
   "name": "rolldown-plugin-tsconfig-paths",
-  "description": "Resolves paths from tsconfig.json for Rolldown.",
-  "version": "1.0.0",
+  "description": "A plugin to resolves paths from tsconfig for Rolldown.",
+  "version": "1.0.1",
   "type": "module",
   "license": "Apache-2.0",
   "repository": {
@@ -20,14 +20,13 @@
     ".": {
       "types": "./out/index.d.ts",
       "import": "./out/index.js",
-      "require": "./out/commonjs/index.js",
+      "require": "./out/index.cjs",
       "default": "./out/index.js"
     }
   },
   "scripts": {
-    "prepublish": "tsc --noEmit && pnpm test && pnpm build",
+    "prepublish": "tsc --noEmit && pnpm build",
     "build": "rolldown --config rolldown.config.ts",
-    "test": "echo \"currently no test\"",
     "changelog": "current-changelog"
   },
   "dependencies": {

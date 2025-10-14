@@ -3,10 +3,10 @@
 [en(English)](./README.md) |
 [zh(中文)](./README_zh.md)
 
-Resolves paths from tsconfig.json for Rolldown.
+A plugin to resolves paths from tsconfig for Rolldown.
 
 This plugin will help you to parse paths from a default or specified
-`tsconfig.json` file, or a parsed tsconfig object,
+`tsconfig.json` or `tsconfig.xxx.json` file, or a parsed tsconfig object,
 and then modify the `resolve.alias` option of Rolldown.
 That you only need a single line of code
 to support tsconfig aliases in Rolldown.

@@ -1,29 +1,33 @@
 import { mkdirSync, readdirSync, rmSync } from "node:fs"
 import { builtinModules } from "node:module"
 import { join } from "node:path"
-import { defineConfig } from "rolldown"
+import { defineConfig, RolldownPlugin } from "rolldown"
 import { dts } from "rolldown-plugin-dts"
-import aliases from "tsconfig-aliases"
 import { dependencies } from "./package.json"
+import tsconfigPaths from "./src/index"
 
 const root = import.meta.dirname
 const out = join(root, "out")
 const lib = defineConfig({
+  plugins: [tsconfigPaths()],
   external: [/^node:/g, ...Object.keys(dependencies), ...builtinModules],
-  resolve: { alias: aliases() },
   cwd: root,
   input: join(root, "src/index.ts"),
   output: { dir: out, format: "esm", minify: true, sourcemap: true },
 })
 
-const esModule = defineConfig({ plugins: [dts({ sourcemap: true })], ...lib })
+const esModule = defineConfig({
+  ...lib,
+  plugins: [...(lib.plugins as RolldownPlugin[]), dts({ sourcemap: true })],
+})
+
 const commonJS = defineConfig({
   ...lib,
   output: {
     ...lib.output,
-    dir: join(out, "commonjs"),
-    format: "commonjs",
+    entryFileNames: "index.cjs",
     exports: "named",
+    format: "commonjs",
   },
 })
 

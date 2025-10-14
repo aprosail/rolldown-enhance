@@ -3,9 +3,9 @@
 [en(English)](./README.md) |
 [zh(中文)](./README_zh.md)
 
-为 Rolldown 解析 tsconfig.json 中的路径映射。
+为 Rolldown 解析 tsconfig 中的路径映射的插件。
 
-这个插件将帮助您从默认或指定的 `tsconfig.json`
+这个插件将帮助您从默认或指定的 `tsconfig.json` / `tsconfig.xxx.json`
 文件，或已解析的 tsconfig 对象中解析路径映射，然后修改 Rolldown 的
 `resolve.alias` 选项。您只需要一行代码即可在 Rolldown 中支持 tsconfig 别名。
 
