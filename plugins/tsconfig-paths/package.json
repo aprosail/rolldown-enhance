@@ -1,20 +1,20 @@
 {
-  "name": "rolldown-enhance",
-  "description": "Some plugins to make your rolldown experience better.",
+  "name": "rolldown-plugin-tsconfig-paths",
+  "description": "Resolves paths from tsconfig.json for Rolldown.",
   "version": "0.0.0",
   "type": "module",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/aprosail/rolldown-enhance.git",
-    "directory": "packages/rolldown-enhance"
+    "directory": "plugins/tsconfig-paths"
   },
   "keywords": [
-    "devtool",
-    "plugins",
+    "aliases",
     "rolldown",
-    "rolldown-enhance",
-    "rolldown-plugins"
+    "rolldown-plugin",
+    "tsconfig",
+    "tsconfig-paths"
   ],
   "exports": {
     ".": {
@@ -31,16 +31,14 @@
     "changelog": "current-changelog"
   },
   "dependencies": {
-    "rolldown-plugin-tsconfig-paths": "workspace:*",
+    "rolldown": "catalog:dep",
     "tsconfig-aliases": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "catalog:dev",
     "common-lib-tsconfig": "workspace:*",
     "current-changelog": "workspace:*",
-    "rolldown": "catalog:dep",
     "rolldown-plugin-dts": "catalog:dev",
-    "typescript": "catalog:dev",
-    "vitest": "catalog:dev"
+    "typescript": "catalog:dev"
   }
 }

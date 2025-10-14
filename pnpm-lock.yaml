@@ -55,7 +55,11 @@ importers:
         specifier: catalog:dev
         version: 3.2.4(@types/node@24.7.2)(tsx@4.20.6)
 
-  packages/common-lib-tsconfig: {}
+  packages/common-lib-tsconfig:
+    devDependencies:
+      tsx:
+        specifier: catalog:dev
+        version: 4.20.6
 
   packages/current-changelog:
     dependencies:
@@ -109,6 +113,9 @@ importers:
       rolldown-plugin-dts:
         specifier: catalog:dev
         version: 0.16.11(rolldown@1.0.0-beta.43)(typescript@5.9.3)
+      rolldown-plugin-tsconfig-paths:
+        specifier: workspace:*
+        version: link:../../plugins/tsconfig-paths
       typescript:
         specifier: catalog:dev
         version: 5.9.3
@@ -146,6 +153,9 @@ importers:
 
   plugins/tsconfig-paths:
     dependencies:
+      rolldown:
+        specifier: catalog:dep
+        version: 1.0.0-beta.43
       tsconfig-aliases:
         specifier: workspace:*
         version: link:../../packages/tsconfig-aliases
@@ -159,18 +169,12 @@ importers:
       current-changelog:
         specifier: workspace:*
         version: link:../../packages/current-changelog
-      rolldown:
-        specifier: catalog:dep
-        version: 1.0.0-beta.43
       rolldown-plugin-dts:
         specifier: catalog:dev
         version: 0.16.11(rolldown@1.0.0-beta.43)(typescript@5.9.3)
       typescript:
         specifier: catalog:dev
         version: 5.9.3
-      vitest:
-        specifier: catalog:dev
-        version: 3.2.4(@types/node@24.7.2)(tsx@4.20.6)
 
 packages:
 

@@ -5,6 +5,8 @@ This repository is a pnpm workspace containing following packages and plugins:
 
 Packages (tools and lower level APIs):
 
+- [common-lib-tsconfig](./packages/common-lib-tsconfig):
+  tsconfig.json code reuse for libraries development.
 - [current-changelog](./packages/current-changelog):
   generate changelog of current version.
 - [rolldown-enhance](./packages/rolldown-enhance):

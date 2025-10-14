@@ -15,5 +15,14 @@
   ],
   "exports": {
     "./tsconfig.json": "./tsconfig.json"
+  },
+  "scripts": {
+    "prepublish": "pnpm test && pnpm build",
+    "build": "echo \"currently no build\"",
+    "test": "echo \"currently no test\"",
+    "changelog": "tsx ../current-changelog/src/main.ts"
+  },
+  "devDependencies": {
+    "tsx": "catalog:dev"
   }
 }
