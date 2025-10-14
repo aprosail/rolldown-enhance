@@ -1,7 +1,7 @@
 {
   "name": "common-lib-tsconfig",
   "description": "Common tsconfig.json templates for libraries development.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "license": "Apache-2.0",
   "repository": {
@@ -11,15 +11,13 @@
   },
   "keywords": [
     "code-reuse",
+    "devtools",
     "tsconfig"
   ],
   "exports": {
     "./tsconfig.json": "./tsconfig.json"
   },
   "scripts": {
-    "prepublish": "pnpm test && pnpm build",
-    "build": "echo \"currently no build\"",
-    "test": "echo \"currently no test\"",
     "changelog": "tsx ../current-changelog/src/main.ts"
   },
   "devDependencies": {
