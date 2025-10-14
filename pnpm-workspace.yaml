@@ -4,12 +4,15 @@ packages:
 
 catalogs:
   lib:
+    commander: ^14.0.1
+    consola: ^3.4.2
     rolldown: 1.0.0-beta.42
 
   dev:
     "@types/node": ^24.7.2
     current-changelog: ^1.2.0
     rolldown-plugin-dts: ^0.16.11
+    tsx: ^4.20.6
     typescript: ^5.9.3
     vitest: ^3.2.4
 

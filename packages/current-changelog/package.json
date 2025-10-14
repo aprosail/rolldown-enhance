@@ -1,0 +1,49 @@
+{
+  "name": "current-changelog",
+  "description": "Parsing changelog text of current or specified version.",
+  "version": "1.2.1",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aprosail/rolldown-enhance.git",
+    "directory": "packages/current-changelog"
+  },
+  "keywords": [
+    "cli",
+    "changelog",
+    "parser",
+    "markdown",
+    "version"
+  ],
+  "bin": {
+    "current-changelog": "out/main.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./out/index.d.ts",
+      "import": "./out/index.js",
+      "require": "./out/commonjs/index.js",
+      "default": "./out/index.js"
+    }
+  },
+  "scripts": {
+    "prepublish": "tsc --noEmit && pnpm test && pnpm build",
+    "build": "rolldown --config rolldown.config.ts",
+    "test": "vitest run",
+    "dev": "vitest",
+    "changelog": "tsx src/main.ts"
+  },
+  "dependencies": {
+    "commander": "catalog:lib",
+    "consola": "catalog:lib"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:dev",
+    "rolldown": "catalog:lib",
+    "rolldown-plugin-dts": "catalog:dev",
+    "tsx": "catalog:dev",
+    "typescript": "catalog:dev",
+    "vitest": "catalog:dev"
+  }
+}
