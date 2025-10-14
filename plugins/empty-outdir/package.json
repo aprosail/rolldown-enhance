@@ -1,47 +1,42 @@
 {
-  "name": "rolldown-enhance",
-  "description": "Some plugins to make your rolldown experience better.",
-  "version": "0.0.0",
+  "name": "rolldown-plugin-empty-outdir",
+  "description": "A plugin to empty output directory for all rolldown outputs.",
+  "version": "1.0.0",
   "type": "module",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/aprosail/rolldown-enhance.git",
-    "directory": "packages/rolldown-enhance"
+    "directory": "plugins/empty-outdir"
   },
   "keywords": [
-    "devtool",
-    "plugins",
+    "empty-outdir",
     "rolldown",
-    "rolldown-enhance",
-    "rolldown-plugins"
+    "rolldown-plugin"
   ],
   "exports": {
     ".": {
       "types": "./out/index.d.ts",
       "import": "./out/index.js",
-      "require": "./out/commonjs/index.js",
+      "require": "./out/index.cjs",
       "default": "./out/index.js"
     }
   },
   "scripts": {
-    "prepublish": "tsc --noEmit && pnpm test && pnpm build",
+    "prepublish": "tsc --noEmit && pnpm build",
     "build": "rolldown --config rolldown.config.ts",
-    "test": "echo \"currently no test\"",
     "changelog": "current-changelog"
   },
   "dependencies": {
-    "rolldown-plugin-empty-outdir": "workspace:*",
-    "rolldown-plugin-tsconfig-paths": "workspace:*",
-    "tsconfig-aliases": "workspace:*"
+    "consola": "catalog:dep",
+    "rolldown": "catalog:dep"
   },
   "devDependencies": {
     "@types/node": "catalog:dev",
     "common-lib-tsconfig": "workspace:*",
     "current-changelog": "workspace:*",
-    "rolldown": "catalog:dep",
     "rolldown-plugin-dts": "catalog:dev",
-    "typescript": "catalog:dev",
-    "vitest": "catalog:dev"
+    "rolldown-plugin-tsconfig-paths": "workspace:*",
+    "typescript": "catalog:dev"
   }
 }

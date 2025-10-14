@@ -2,9 +2,9 @@ import { builtinModules } from "node:module"
 import { join } from "node:path"
 import { defineConfig, RolldownPlugin } from "rolldown"
 import { dts } from "rolldown-plugin-dts"
-import emptyOutdir from "rolldown-plugin-empty-outdir"
 import tsconfigPaths from "rolldown-plugin-tsconfig-paths"
 import { dependencies } from "./package.json"
+import emptyOutdir from "./src/index"
 
 const root = import.meta.dirname
 const out = join(root, "out")

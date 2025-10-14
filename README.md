@@ -16,8 +16,10 @@ Packages (tools and lower level APIs):
 
 Plugins (with `rolldown-plugin-` prefix):
 
+- [empty-outdir](./plugins/empty-outdir):
+  empty output directory for all rolldown outputs.
 - [tsconfig-paths](./plugins/tsconfig-paths):
-  resolve paths from `tsconfig.json` for Rolldown.
+  resolve paths from tsconfig for rolldown.
 
 WIP.
 
