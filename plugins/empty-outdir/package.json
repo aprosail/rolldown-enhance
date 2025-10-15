@@ -1,7 +1,7 @@
 {
   "name": "rolldown-plugin-empty-outdir",
   "description": "A plugin to empty output directory for all rolldown outputs.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "license": "Apache-2.0",
   "repository": {
