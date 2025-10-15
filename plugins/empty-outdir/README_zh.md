@@ -1,5 +1,8 @@
 # Rolldown Plugin Empty Outdir
 
+[en(English)](./README.md) |
+[zh(中文)](./README_zh.md)
+
 用于清空所有 Rolldown 输出目录的插件。
 
 ## 使用方法
@@ -7,7 +10,8 @@
 将此插件添加到你的 Rolldown 配置中，它将清空所有 Rolldown 输出目录。
 
 ```ts
-import rolldown from "rolldown"
+// rolldown.config.ts
+import { defineConfig } from 'rolldown'
 import emptyOutdir from "rolldown-plugin-empty-outdir"
 
 export default defineConfig({
@@ -30,7 +34,8 @@ export default defineConfig({
 根目录默认为 `cwd`，你也可以像这样自定义此选项：
 
 ```ts
-import rolldown from "rolldown"
+// rolldown.config.ts
+import { defineConfig } from 'rolldown'
 import emptyOutdir from "rolldown-plugin-empty-outdir"
 
 const monorepoRoot = ...
@@ -45,7 +50,8 @@ export default defineConfig({
 设置为 `"force"`，如下所示：
 
 ```ts
-import rolldown from "rolldown"
+// rolldown.config.ts
+import { defineConfig } from 'rolldown'
 import emptyOutdir from "rolldown-plugin-empty-outdir"
 
 export default defineConfig({

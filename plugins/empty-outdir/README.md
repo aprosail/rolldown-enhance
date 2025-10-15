@@ -1,5 +1,8 @@
 # Rolldown Plugin Empty Outdir
 
+[en(English)](./README.md) |
+[zh(中文)](./README_zh.md)
+
 A plugin to empty output directory for all rolldown outputs.
 
 ## Usage
@@ -8,7 +11,8 @@ Add this plugin to your rolldown configurations,
 and it will empty output directory for all rolldown outputs.
 
 ```ts
-import rolldown from "rolldown"
+// rolldown.config.ts
+import { defineConfig } from 'rolldown'
 import emptyOutdir from "rolldown-plugin-empty-outdir"
 
 export default defineConfig({
@@ -33,7 +37,8 @@ The root directory is `cwd` by default,
 and you can also customize such option like this:
 
 ```ts
-import rolldown from "rolldown"
+// rolldown.config.ts
+import { defineConfig } from 'rolldown'
 import emptyOutdir from "rolldown-plugin-empty-outdir"
 
 const monorepoRoot = ...
@@ -48,7 +53,8 @@ and you understand the risks, and make sure you can handle such cases,
 you can set `mode` to `"force"` like this:
 
 ```ts
-import rolldown from "rolldown"
+// rolldown.config.ts
+import { defineConfig } from 'rolldown'
 import emptyOutdir from "rolldown-plugin-empty-outdir"
 
 export default defineConfig({
