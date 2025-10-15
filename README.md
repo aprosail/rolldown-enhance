@@ -5,20 +5,29 @@ This repository is a pnpm workspace containing following packages and plugins:
 
 Packages (tools and lower level APIs):
 
-- [common-lib-tsconfig](./packages/common-lib-tsconfig):
+- [common-lib-tsconfig](./packages/common-lib-tsconfig)
+  ([npm](https://www.npmjs.com/package/common-lib-tsconfig)):
   tsconfig.json code reuse for libraries development.
-- [current-changelog](./packages/current-changelog):
+- [current-changelog](./packages/current-changelog)
+  ([npm](https://www.npmjs.com/package/current-changelog)):
   generate changelog of current version.
-- [rolldown-enhance](./packages/rolldown-enhance):
+- [rolldown-enhance](./packages/rolldown-enhance)
+  ([npm](https://www.npmjs.com/package/rolldown-enhance)):
   the collection of all those packages and plugins.
-- [tsconfig-aliases](./packages/tsconfig-aliases):
+- [tsconfig-aliases](./packages/tsconfig-aliases)
+  ([npm](https://www.npmjs.com/package/tsconfig-aliases)):
   detect aliases defined in `tsconfig.json`.
 
 Plugins (with `rolldown-plugin-` prefix):
 
-- [empty-outdir](./plugins/empty-outdir):
+- [auto-external](./plugins/auto-external)
+  ([npm](https://www.npmjs.com/package/rolldown-plugin-auto-external)):
+  auto externalize dependencies for rolldown.
+- [empty-outdir](./plugins/empty-outdir)
+  ([npm](https://www.npmjs.com/package/rolldown-plugin-empty-outdir)):
   empty output directory for all rolldown outputs.
-- [tsconfig-paths](./plugins/tsconfig-paths):
+- [tsconfig-paths](./plugins/tsconfig-paths)
+  ([npm](https://www.npmjs.com/package/rolldown-plugin-tsconfig-paths)):
   resolve paths from tsconfig for rolldown.
 
 WIP.

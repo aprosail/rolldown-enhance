@@ -1,0 +1,23 @@
+{
+  "name": "rolldown-plugin-auto-external",
+  "description": "A rolldown plugin to auto externalize dependencies.",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "prepublish": "tsc --noEmit && pnpm build",
+    "build": "rolldown --config rolldown.config.ts",
+    "changelog": "current-changelog"
+  },
+  "dependencies": {
+    "rolldown": "catalog:dep"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:dev",
+    "common-lib-tsconfig": "workspace:*",
+    "current-changelog": "workspace:*",
+    "rolldown-plugin-dts": "catalog:dev",
+    "rolldown-plugin-empty-outdir": "workspace:*",
+    "rolldown-plugin-tsconfig-paths": "workspace:*",
+    "typescript": "catalog:dev"
+  }
+}

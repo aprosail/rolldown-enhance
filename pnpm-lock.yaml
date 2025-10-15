@@ -154,6 +154,34 @@ importers:
         specifier: catalog:dev
         version: 3.2.4(@types/node@24.7.2)(tsx@4.20.6)(yaml@2.8.1)
 
+  plugins/auto-external:
+    dependencies:
+      rolldown:
+        specifier: catalog:dep
+        version: 1.0.0-beta.43
+    devDependencies:
+      '@types/node':
+        specifier: catalog:dev
+        version: 24.7.2
+      common-lib-tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/common-lib-tsconfig
+      current-changelog:
+        specifier: workspace:*
+        version: link:../../packages/current-changelog
+      rolldown-plugin-dts:
+        specifier: catalog:dev
+        version: 0.16.11(rolldown@1.0.0-beta.43)(typescript@5.9.3)
+      rolldown-plugin-empty-outdir:
+        specifier: workspace:*
+        version: link:../empty-outdir
+      rolldown-plugin-tsconfig-paths:
+        specifier: workspace:*
+        version: link:../tsconfig-paths
+      typescript:
+        specifier: catalog:dev
+        version: 5.9.3
+
   plugins/empty-outdir:
     dependencies:
       consola:
