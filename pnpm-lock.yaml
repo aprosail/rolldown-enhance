@@ -20,8 +20,8 @@ catalogs:
       specifier: ^24.7.2
       version: 24.7.2
     rolldown-plugin-dts:
-      specifier: ^0.16.11
-      version: 0.16.11
+      specifier: ^0.16.12
+      version: 0.16.12
     tsx:
       specifier: ^4.20.6
       version: 4.20.6
@@ -81,7 +81,7 @@ importers:
         version: 1.0.0-beta.43
       rolldown-plugin-dts:
         specifier: catalog:dev
-        version: 0.16.11(rolldown@1.0.0-beta.43)(typescript@5.9.3)
+        version: 0.16.12(rolldown@1.0.0-beta.43)(typescript@5.9.3)
       tsx:
         specifier: catalog:dev
         version: 4.20.6
@@ -118,7 +118,7 @@ importers:
         version: 1.0.0-beta.43
       rolldown-plugin-dts:
         specifier: catalog:dev
-        version: 0.16.11(rolldown@1.0.0-beta.43)(typescript@5.9.3)
+        version: 0.16.12(rolldown@1.0.0-beta.43)(typescript@5.9.3)
       typescript:
         specifier: catalog:dev
         version: 5.9.3
@@ -146,7 +146,7 @@ importers:
         version: 1.0.0-beta.43
       rolldown-plugin-dts:
         specifier: catalog:dev
-        version: 0.16.11(rolldown@1.0.0-beta.43)(typescript@5.9.3)
+        version: 0.16.12(rolldown@1.0.0-beta.43)(typescript@5.9.3)
       typescript:
         specifier: catalog:dev
         version: 5.9.3
@@ -171,7 +171,7 @@ importers:
         version: link:../../packages/current-changelog
       rolldown-plugin-dts:
         specifier: catalog:dev
-        version: 0.16.11(rolldown@1.0.0-beta.43)(typescript@5.9.3)
+        version: 0.16.12(rolldown@1.0.0-beta.43)(typescript@5.9.3)
       rolldown-plugin-empty-outdir:
         specifier: workspace:*
         version: link:../empty-outdir
@@ -202,7 +202,7 @@ importers:
         version: link:../../packages/current-changelog
       rolldown-plugin-dts:
         specifier: catalog:dev
-        version: 0.16.11(rolldown@1.0.0-beta.43)(typescript@5.9.3)
+        version: 0.16.12(rolldown@1.0.0-beta.43)(typescript@5.9.3)
       rolldown-plugin-tsconfig-paths:
         specifier: workspace:*
         version: link:../tsconfig-paths
@@ -230,7 +230,7 @@ importers:
         version: link:../../packages/current-changelog
       rolldown-plugin-dts:
         specifier: catalog:dev
-        version: 0.16.11(rolldown@1.0.0-beta.43)(typescript@5.9.3)
+        version: 0.16.12(rolldown@1.0.0-beta.43)(typescript@5.9.3)
       typescript:
         specifier: catalog:dev
         version: 5.9.3
@@ -460,11 +460,6 @@ packages:
   '@oxlint/linux-arm64-musl@1.22.0':
     resolution: {integrity: sha512-Aau6V6Osoyb3SFmRejP3rRhs1qhep4aJTdotFf1RVMVSLJkF7Ir0p+eGZSaIJyylFZuCCxHpud3hWasphmZnzw==}
     cpu: [arm64]
-    os: [linux]
-
-  '@oxlint/linux-x64-gnu@1.22.0':
-    resolution: {integrity: sha512-6eOtv+2gHrKw/hxUkV6hJdvYhzr0Dqzb4oc7sNlWxp64jU6I19tgMwSlmtn02r34YNSn+/NpZ/ECvQrycKUUFQ==}
-    cpu: [x64]
     os: [linux]
 
   '@oxlint/linux-x64-musl@1.22.0':
@@ -879,8 +874,8 @@ packages:
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
 
-  rolldown-plugin-dts@0.16.11:
-    resolution: {integrity: sha512-9IQDaPvPqTx3RjG2eQCK5GYZITo203BxKunGI80AGYicu1ySFTUyugicAaTZWRzFWh9DSnzkgNeMNbDWBbSs0w==}
+  rolldown-plugin-dts@0.16.12:
+    resolution: {integrity: sha512-9dGjm5oqtKcbZNhpzyBgb8KrYiU616A7IqcFWG7Msp1RKAXQ/hapjivRg+g5IYWSiFhnk3OKYV5T4Ft1t8Cczg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       '@ts-macro/tsc': ^0.3.6
@@ -1205,9 +1200,6 @@ snapshots:
   '@oxlint/linux-arm64-musl@1.22.0':
     optional: true
 
-  '@oxlint/linux-x64-gnu@1.22.0':
-    optional: true
-
   '@oxlint/linux-x64-musl@1.22.0':
     optional: true
 
@@ -1493,7 +1485,6 @@ snapshots:
       '@oxlint/darwin-x64': 1.22.0
       '@oxlint/linux-arm64-gnu': 1.22.0
       '@oxlint/linux-arm64-musl': 1.22.0
-      '@oxlint/linux-x64-gnu': 1.22.0
       '@oxlint/linux-x64-musl': 1.22.0
       '@oxlint/win32-arm64': 1.22.0
       '@oxlint/win32-x64': 1.22.0
@@ -1522,7 +1513,7 @@ snapshots:
 
   resolve-pkg-maps@1.0.0: {}
 
-  rolldown-plugin-dts@0.16.11(rolldown@1.0.0-beta.43)(typescript@5.9.3):
+  rolldown-plugin-dts@0.16.12(rolldown@1.0.0-beta.43)(typescript@5.9.3):
     dependencies:
       '@babel/generator': 7.28.3
       '@babel/parser': 7.28.4

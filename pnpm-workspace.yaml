@@ -10,7 +10,7 @@ catalogs:
 
   dev:
     "@types/node": ^24.7.2
-    rolldown-plugin-dts: ^0.16.11
+    rolldown-plugin-dts: ^0.16.12
     tsx: ^4.20.6
     typescript: ^5.9.3
     vitest: ^3.2.4
